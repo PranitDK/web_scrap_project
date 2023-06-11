@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Scraping Example</title>ssss
+</head>
+<body>
+    <h1>Web Scraping Example</h1>
+    <form action="/" method="get">
+        <label for="url">Enter a URL:</label>
+        <input type="text" id="url" name="url" required>
+        <button type="submit">Submit</button>
+    </form>
+    {% if title and content %}
+        <h2>Title:</h2>
+        <p>{{ title }}</p>
+        <h2>Content:</h2>
+        <p>{{ content }}</p>
+    {% elif title or content %}
+        <p>An error occurred. Please check the URL and try again.</p>
+    {% endif %}
+</body>
+</html>
